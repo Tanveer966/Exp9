@@ -23,8 +23,8 @@ jobs:
       - name: Build React app
         run: npm run build
 
-      - name: Build Docker image (no push)
+      - name: Build Docker image (GitHub runner)
         run: docker build -t exp9-react:latest .
 
-      - name: Finish
-        run: echo "CI/CD successful"
+      - name: List images
+        run: docker images
